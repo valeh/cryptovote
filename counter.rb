@@ -60,5 +60,8 @@ if $PROGRAM_NAME == __FILE__
   chain = JSON.parse(RestClient.get(options[:chain_url]))['chain']
 
   counter = Counter.new(chain)
+  start = Time.now
   puts counter.election_results
+  finish = Time.now
+  puts "Counted in #{finish-start} seconds"
 end
