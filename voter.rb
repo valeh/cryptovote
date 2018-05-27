@@ -11,9 +11,8 @@ class Voter
   ELIGIBLE_VOTERS_PATH = 'data/public_keys.json'.freeze
   CANDIDATES_PATH = 'data/candidates.json'.freeze
   ELECTION_PUBLIC_KEY_PATH = 'data/election_public.pem'.freeze
-  OBSERVER_ADDRESS = 'http://localhost:4567'.freeze
-
-  RANDOM_RING_MEMBERS = 10
+  OBSERVER_ADDRESS = ENV['OBSERVER_ADDRESS'] || 'http://localhost:4567'.freeze
+  RANDOM_RING_MEMBERS = ENV['RING_MEMBERS'].to_i || 10
 
   attr_reader :eligible_voters, :candidates, :voter_private_key, :election_public_key
 
