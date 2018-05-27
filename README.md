@@ -22,7 +22,7 @@ curl http://localhost:7075/chain
 * Vote 
 
 ```
-./voter.rb -p 000000000000000000000000000000004a0f1e1ec8b44d4bba77616574b177ce -c "Hulk"
+OBSERVER_ADDRESS=http://localhost:7075/chain ./voter.rb -p 000000000000000000000000000000004a0f1e1ec8b44d4bba77616574b177ce -c "Hulk"
 ```
 
 
